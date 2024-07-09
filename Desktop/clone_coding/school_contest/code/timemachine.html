@@ -10,42 +10,76 @@
             font-family: "Jua", sans-serif;
             background-color: #FFF2CF;
             text-align: center;
-        }
-        p{
-            text-align: center;
             color: #8FC76D;
+        }
+        .result{
+            text-align: center;
             font-size: 60px;
+            padding-top: 30px;
+            padding-bottom: 30px;
         }
         .box{
             width: 300px;
             height: 400px;
-            background-color: #FFF2CF;
+            background-color: #8FC76D;
             display: inline-block;
             text-align: center;
+            padding: 20px 20px;
         }
-        .lef{
-            display: inline-block;
-            padding-left: 50px;
+        a:link, a:visited {
+            text-decoration: none;
+            color: #8FC76D;
         }
-        .rig{
-            display: inline-block;
-            padding-right: 50px;
+        ul {
+            list-style: none;
+            width:620px;
+            margin: auto auto;
+            padding-top: 20px;
         }
-        .gbtf{
+        li {
+            display:inline-block;
+            width:120px;
+            border:5px solid #8FC76D;
+            padding:2px 2px;
+            font-size:24px;
+            text-align:center;
+            border-radius: 80px;
+        }
+        .brave{
+            text-align: center;
+        }
+        .de > li{
+            width: 65px;
+            font-size: 70px;
+            height: 80px;
+            padding-right: 15px;
+            float: left;
+            border:7px solid #8FC76D;
+        }
+        .in > li{
+            width: 65px;
+            font-size: 60px;
+            height: 72px;
+            padding-left: 15px;
+            padding-top: 8px;
             float: right;
-            padding-top: 10px;
+            border:7px solid #8FC76D;
         }
     </style>
 </head>
 <body>
-    <p><b>TIME MACHINE</b></p>
-    <div class="container">
-        <div class="rig"><img onclick="decrease()" src="/Users/exn199/Desktop/clone_coding/school_contest/image/button/pm/minus.png" height="200px"/></div>
-        <div class="box"><img id="img" src="/Users/exn199/Desktop/clone_coding/school_contest/image/timemachine/pic1.jpeg" height="400px"/></div>
-        <div class="lef"><img onclick="increase()" src="/Users/exn199/Desktop/clone_coding/school_contest/image/button/pm/plus.png" height="200px"/></div>
+    <div class="result"><a href="/Users/exn199/Desktop/clone_coding/school_contest/code/timemachine.html"><b>TIME MACHINE</b></a></div>
+    <div class="brave">
+        <ul>
+            <div class="de"><li onclick="decrease()">◀︎</li></div>
+            <div class="box"><img id="img" src="/Users/exn199/Desktop/clone_coding/school_contest/image/timemachine/pic1.jpeg" height="400px"/></div>
+            <div class="in"><li onclick="increase()">►</li></div>
+        </ul>
       </div>
-      <div>
-        <a class="gbtf" href = "/Users/exn199/Desktop/clone_coding/school_contest/code/mainpage2.html" ><img src="/Users/exn199/Desktop/clone_coding/school_contest/image/button/gbtf/gbtf1.png" alt="gbtf" height="80px"></a>
+      <div class="brave">
+        <ul>
+            <li><a href="/Users/exn199/Desktop/clone_coding/school_contest/code/mainpage2.html">main page</a></li>
+        </ul>
     </div>
       <script>
         var cnt=0;

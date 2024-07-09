@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>time machine</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+        body{
+            font-family: "Jua", sans-serif;
+            background-color: #FFF2CF;
+            text-align: center;
+        }
+        p{
+            text-align: center;
+            color: #8FC76D;
+            font-size: 60px;
+        }
+        .box{
+            width: 300px;
+            height: 400px;
+            background-color: #FFF2CF;
+            display: inline-block;
+            text-align: center;
+        }
+        .lef{
+            display: inline-block;
+            padding-left: 50px;
+        }
+        .rig{
+            display: inline-block;
+            padding-right: 50px;
+        }
+        .gbtf{
+            float: right;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <p><b>TIME MACHINE</b></p>
+    <div class="container">
+        <div class="rig"><img onclick="decrease()" src="/Users/exn199/Desktop/coding/html/clone_coding/image/minus.png" height="200px"/></div>
+        <div class="box"><img id="img" src="/Users/exn199/Desktop/coding/html/clone_coding/image/pic1.jpeg" height="400px"/></div>
+        <div class="lef"><img onclick="increase()" src="/Users/exn199/Desktop/coding/html/clone_coding/image/plus.png" height="200px"/></div>
+      </div>
+      <div>
+        <a class="gbtf" href = "/Users/exn199/Desktop/coding/html/clone_coding/secondmainpage.html"><img src="/Users/exn199/Desktop/coding/html/clone_coding/image/back.png" height="80px"/></a>
+    </div>
+      <script>
+        var cnt=0;
+        function increase(){
+            cnt+=1;
+            if (cnt==6){
+                cnt=0;
+            }
+            console.log(cnt);
+            toggleImg(cnt);
+        }
+        $decBtn.addEventListener("click",decrease);
+        function decrease(){
+            cnt-=1;
+            if (cnt<0){
+                cnt=5;
+            }
+            console.log(cnt);
+            toggleImg(cnt);
+        }
+        function toggleImg(cnt) {
+            if (cnt==1){
+                document.getElementById("img").src = "/Users/exn199/Desktop/coding/html/clone_coding/image/pic2.jpeg";
+            }
+            else if (cnt==2){
+                document.getElementById("img").src = "/Users/exn199/Desktop/coding/html/clone_coding/image/pic3.jpeg";
+            }
+            else if (cnt==3){
+                document.getElementById("img").src = "/Users/exn199/Desktop/coding/html/clone_coding/image/pic4.jpeg";
+            }
+            else if (cnt==4){
+                document.getElementById("img").src = "/Users/exn199/Desktop/coding/html/clone_coding/image/pic5.jpeg";
+            }
+            else if (cnt==5){
+                document.getElementById("img").src = "/Users/exn199/Desktop/coding/html/clone_coding/image/pic6.jpeg";
+            }
+            else{
+                document.getElementById("img").src = "/Users/exn199/Desktop/coding/html/clone_coding/image/pic1.jpeg";
+            }
+            console.log(cnt);
+        }
+      </script>
+</body>
+</html>

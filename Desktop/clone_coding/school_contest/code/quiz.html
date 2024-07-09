@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+        body{
+            background-color: #FFF2CF;
+            font-family: "Jua", sans-serif;
+            color: #8FC76D;
+        }
+        div{
+            text-align: center;
+            font-size: 700%;
+            padding-top: 40px;
+        }
+        .gbtf{
+            float: right;
+            font-size: 20px;
+            padding-top: 10%;
+            padding-right: 30px;
+        }
+        p{
+          font-size: 50px;
+          text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <p><b>RESULT</b></p>
+    <div>
+        <script>
+            var cnt=0;
+            var bday=prompt("가은이가 사는곳은 어디일까요? (두글자)");
+            if (bday===null){
+                alert("null");
+            }
+            else{
+                if (bday==="명지"){
+                    cnt+=1;
+                }
+            }
+            console.log(cnt);
+            var mbti=prompt("가은이의 mbti는 무엇일까요? (모두 대문자로 작성, 띄어쓰기XX)");
+            if (mbti===null){
+                alert("null");
+            }
+            else{
+                if (mbti==="ENTP"){
+                    cnt+=1;
+                }
+            }
+            console.log(cnt);
+            var area=prompt("가은이의 생일은 언제일까요? ('YYYY MM DD' 순으로 작성)");
+            if (area===null){
+                alert("null");
+            }
+            else{
+                if (area==="2008 07 19"){
+                    cnt+=1;
+                }
+            }
+            console.log(cnt);
+            document.write("3문제 중 "+cnt+"개 맞추셨습니다!");
+        </script>
+    </div>
+    <div class="gbtf">
+        <div>
+            <a class="gbtf" href = "/Users/exn199/Desktop/coding/html/clone_coding/secondmainpage.html"><img src="/Users/exn199/Desktop/coding/html/clone_coding/image/back.png" height="100px"/></a>
+        </div>
+    </div>
+</body>
+</html>

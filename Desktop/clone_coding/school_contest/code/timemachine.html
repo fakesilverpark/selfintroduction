@@ -5,15 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>time machine</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
         body{
-            font-family: "Jua", sans-serif;
-            background-color: #FFF2CF;
+            font-family: "Black Han Sans", sans-serif;
             text-align: center;
             color: #8FC76D;
         }
         .result{
-            text-align: center;
             font-size: 60px;
             padding-top: 30px;
             padding-bottom: 30px;
@@ -23,8 +21,9 @@
             height: 400px;
             background-color: #8FC76D;
             display: inline-block;
-            text-align: center;
             padding: 20px 20px;
+            margin: 15px 15px;
+            text-align: center;
         }
         a:link, a:visited {
             text-decoration: none;
@@ -32,95 +31,100 @@
         }
         ul {
             list-style: none;
-            width:620px;
-            margin: auto auto;
+            width:"1000px";
             padding-top: 20px;
         }
         li {
-            display:inline-block;
-            width:120px;
+            display:inline;
+            width:100px;
             border:5px solid #8FC76D;
             padding:2px 2px;
             font-size:24px;
-            text-align:center;
             border-radius: 80px;
-        }
-        .brave{
             text-align: center;
+            margin: auto 70px;
+        }
+        .de, .in{
+            display: inline;
+            margin-top: 700px;
         }
         .de > li{
-            width: 65px;
-            font-size: 70px;
-            height: 80px;
-            padding-right: 15px;
+            width: 84px;
+            font-size: 90px;
+            height: 100px;
+            padding-right: 16px;
             float: left;
             border:7px solid #8FC76D;
+            margin-top: 150px;
         }
         .in > li{
-            width: 65px;
-            font-size: 60px;
-            height: 72px;
-            padding-left: 15px;
-            padding-top: 8px;
+            width: 86px;
+            font-size: 72px;
+            height: 90px;
+            padding-left: 14px;
+            padding-top: 10px;
             float: right;
             border:7px solid #8FC76D;
+            margin-top: 150px;
+        }
+        .braver{
+            width: 1000px;
+            height: 500px;
+            margin: auto 14%;
         }
     </style>
 </head>
 <body>
     <div class="result"><a href="/Users/exn199/Desktop/clone_coding/school_contest/code/timemachine.html"><b>TIME MACHINE</b></a></div>
-    <div class="brave">
+    <div class="braver">
         <ul>
             <div class="de"><li onclick="decrease()">◀︎</li></div>
             <div class="box"><img id="img" src="/Users/exn199/Desktop/clone_coding/school_contest/image/timemachine/pic1.jpeg" height="400px"/></div>
             <div class="in"><li onclick="increase()">►</li></div>
         </ul>
-      </div>
-      <div class="brave">
+    </div>
+    <div class="brave">
         <ul>
             <li><a href="/Users/exn199/Desktop/clone_coding/school_contest/code/mainpage2.html">main page</a></li>
         </ul>
     </div>
-      <script>
-        var cnt=0;
-        function increase(){
-            cnt+=1;
-            if (cnt==6){
-                cnt=0;
+        <script>
+            var cnt=0;
+            function increase(){
+                cnt+=1;
+                if (cnt==6){
+                    cnt=0;
+                }
+                toggleImg(cnt);
             }
-            console.log(cnt);
-            toggleImg(cnt);
-        }
-        $decBtn.addEventListener("click",decrease);
-        function decrease(){
-            cnt-=1;
-            if (cnt<0){
-                cnt=5;
+            $decBtn.addEventListener("click",decrease);
+            function decrease(){
+                cnt-=1;
+                if (cnt<0){
+                    cnt=5;
+                }
+                toggleImg(cnt);
             }
-            console.log(cnt);
-            toggleImg(cnt);
-        }
-        function toggleImg(cnt) {
-            if (cnt==1){
-                document.getElementById("img").src = "/Users/exn199/Desktop/clone_coding/school_contest/image/timemachine/pic2.jpeg";
+            function toggleImg(cnt) {
+                if (cnt==1){
+                    document.getElementById("img").src = "/Users/exn199/Desktop/clone_coding/school_contest/image/timemachine/pic2.jpeg";
+                }
+                else if (cnt==2){
+                    document.getElementById("img").src = "/Users/exn199/Desktop/clone_coding/school_contest/image/timemachine/pic3.jpeg";
+                }
+                else if (cnt==3){
+                    document.getElementById("img").src = "/Users/exn199/Desktop/clone_coding/school_contest/image/timemachine/pic4.jpeg";
+                }
+                else if (cnt==4){
+                    document.getElementById("img").src = "/Users/exn199/Desktop/clone_coding/school_contest/image/timemachine/pic5.jpeg";
+                }
+                else if (cnt==5){
+                    document.getElementById("img").src = "/Users/exn199/Desktop/clone_coding/school_contest/image/timemachine/pic6.jpeg";
+                }
+                else{
+                    document.getElementById("img").src = "/Users/exn199/Desktop/clone_coding/school_contest/image/timemachine/pic1.jpeg";
+                }
             }
-            else if (cnt==2){
-                document.getElementById("img").src = "/Users/exn199/Desktop/clone_coding/school_contest/image/timemachine/pic3.jpeg";
-            }
-            else if (cnt==3){
-                document.getElementById("img").src = "/Users/exn199/Desktop/clone_coding/school_contest/image/timemachine/pic4.jpeg";
-            }
-            else if (cnt==4){
-                document.getElementById("img").src = "/Users/exn199/Desktop/clone_coding/school_contest/image/timemachine/pic5.jpeg";
-            }
-            else if (cnt==5){
-                document.getElementById("img").src = "/Users/exn199/Desktop/clone_coding/school_contest/image/timemachine/pic6.jpeg";
-            }
-            else{
-                document.getElementById("img").src = "/Users/exn199/Desktop/clone_coding/school_contest/image/timemachine/pic1.jpeg";
-            }
-            console.log(cnt);
-        }
-      </script>
+        </script>
 </body>
 </html>

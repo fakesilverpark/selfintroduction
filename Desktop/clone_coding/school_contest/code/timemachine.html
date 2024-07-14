@@ -35,7 +35,6 @@
         ul {
             text-align: center;
             list-style: none;
-            width:"500px";
             padding-top: 20px;
             padding-right: 80px;
         }
@@ -43,7 +42,7 @@
             display:inline;
             width:100px;
             border:5px solid #8FC76D;
-            padding:2px 2px;
+            padding:7px 10px;
             font-size:24px;
             border-radius: 80px;
             text-align: center;
@@ -76,6 +75,11 @@
             margin: auto 14%;
             padding: 20px;
         }
+        .mainpage{
+            display:inline-block;
+            padding:7px 10px;
+            font-size:18px;
+        }
     </style>
 </head>
 <body>
@@ -83,7 +87,7 @@
     <div class="braver">
         <ul>
             <div class="de"><li onclick="decrease()">◀︎</li></div>
-            <div class="box"><img id="img" src="/Users/exn199/Desktop/clone_coding/school_contest/timemachine/pic1.jpeg" height="300px"/></div>
+            <div class="box"><img id="img" src="/Users/exn199/Desktop/clone_coding/school_contest/code/timemachine/pic1.jpeg" height="300px"/></div>
             <div class="in"><li onclick="increase()">►</li></div>
         </ul>
     </div>
@@ -111,22 +115,22 @@
             }
             function toggleImg(cnt) {
                 if (cnt==1){
-                    document.getElementById("img").src = "/Users/exn199/Desktop/clone_coding/school_contest/timemachine/pic2.jpeg";
+                    document.getElementById("img").src = "/Users/exn199/Desktop/clone_coding/school_contest/code/timemachine/pic1\.jpeg";
                 }
                 else if (cnt==2){
-                    document.getElementById("img").src = "/Users/exn199/Desktop/clone_coding/school_contest/timemachine/pic3.jpeg";
+                    document.getElementById("img").src = "/Users/exn199/Desktop/clone_coding/school_contest/code/timemachine/pic3.jpeg";
                 }
                 else if (cnt==3){
-                    document.getElementById("img").src = "/Users/exn199/Desktop/clone_coding/school_contest/timemachine/pic4.jpeg";
+                    document.getElementById("img").src = "/Users/exn199/Desktop/clone_coding/school_contest/code/timemachine/pic4.jpeg";
                 }
                 else if (cnt==4){
-                    document.getElementById("img").src = "/Users/exn199/Desktop/clone_coding/school_contest/timemachine/pic5.jpeg";
+                    document.getElementById("img").src = "/Users/exn199/Desktop/clone_coding/school_contest/code/timemachine/pic5.jpeg";
                 }
                 else if (cnt==5){
-                    document.getElementById("img").src = "/Users/exn199/Desktop/clone_coding/school_contest/timemachine/pic6.jpeg";
+                    document.getElementById("img").src = "/Users/exn199/Desktop/clone_coding/school_contest/code/timemachine/pic6.jpeg";
                 }
                 else{
-                    document.getElementById("img").src = "/Users/exn199/Desktop/clone_coding/school_contest/timemachine/pic1.jpeg";
+                    document.getElementById("img").src = "/Users/exn199/Desktop/clone_coding/school_contest/code/timemachine/pic1.jpeg";
                 }
             }
         </script>
